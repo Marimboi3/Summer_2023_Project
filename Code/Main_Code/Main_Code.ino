@@ -33,6 +33,6 @@ void sevenSegWrite(byte digit)
 void loop() 
 {
   int reading = analogRead(lightRead);
-  Serial.print(reading);
+  Serial.println(reading);
   delay(1000);
 }
