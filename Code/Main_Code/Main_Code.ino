@@ -20,6 +20,7 @@ void setup()
   pinMode(latchPin, OUTPUT);
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
+  Serial.begin(9600);
 }
 
 void sevenSegWrite(byte digit)
@@ -32,6 +33,6 @@ void sevenSegWrite(byte digit)
 void loop() 
 {
   int reading = analogRead(lightRead);
-  print(reading);
+  Serial.print(reading);
   delay(1000);
 }
