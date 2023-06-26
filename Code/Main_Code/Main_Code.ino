@@ -134,45 +134,45 @@ void loop()
   int reading = analogRead(lightRead);
   Serial.println(reading);
 
-  if (reading >= 0 && reading < 5)
+  if (reading < 5)
   {
     displayZero();
   }
-  else if (reading <= 5 && reading < 10)
+  else if (reading >= 5 && reading < 10)
   {
     displayOne();
   }
-  else if (reading <= 10 && reading < 15)
+  else if (reading >= 10 && reading < 15)
   {
     displayTwo();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 15 && reading < 20)
   {
-    displayThree
+    displayThree();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 20 && reading < 25)
   {
     displayFour();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 25 && reading < 30)
   {
     displayFive();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 30 && reading < 35)
   {
     displaySix();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 35 && reading < 40)
   {
     displaySeven();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 40 && reading < 45)
   {
     displayEight();
   }
-  else if (reading <= 15 && reading < 20)
+  else if (reading >= 45)
   {
     displayNine();
   }
-  delay(1000);
+  delay(2500);
 }
