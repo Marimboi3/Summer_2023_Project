@@ -24,7 +24,7 @@ void loop()
   int reading = analogRead(lightRead);
   Serial.println(reading);
 
-  if (reading < 5) //display zero
+  if (reading < 72) //display zero
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, HIGH);
@@ -34,7 +34,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 5 && reading < 10) //display one
+  else if (reading >= 72 && reading < 144) //display one
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, LOW);
@@ -44,7 +44,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 10 && reading < 15) //display two
+  else if (reading >= 144 && reading < 217) //display two
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, LOW);
@@ -54,17 +54,17 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 15 && reading < 20) //display three
+  else if (reading >= 217 && reading < 289) //display three
   {
     digitalWrite(center, HIGH);
-    digitalWrite(leftUp, HIGH);
+    digitalWrite(leftUp, LOW);
     digitalWrite(centerUp, HIGH);
-    digitalWrite(rightUp, LOW);
-    digitalWrite(rightDown, LOW);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
     digitalWrite(centerDown, HIGH);
-    digitalWrite(leftDown, HIGH);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 20 && reading < 25) //display four
+  else if (reading >= 289 && reading < 361) //display four
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -74,7 +74,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 25 && reading < 30) //display five
+  else if (reading >= 361 && reading < 433) //display five
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -84,7 +84,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 30 && reading < 35) //display six
+  else if (reading >= 433 && reading < 506) //display six
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -92,9 +92,9 @@ void loop()
     digitalWrite(rightUp, LOW);
     digitalWrite(rightDown, HIGH);
     digitalWrite(centerDown, HIGH);
-    digitalWrite(leftDown, LOW);
+    digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 35 && reading < 40) //display seven
+  else if (reading >= 506 && reading < 578) //display seven
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, LOW);
@@ -104,7 +104,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 40 && reading < 45) //display eight
+  else if (reading >= 578 && reading < 650) //display eight
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -114,7 +114,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 45) //display nine
+  else if (reading >= 650) //display nine
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -124,5 +124,5 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  delay(2000);
+  //delay(500);
 }
