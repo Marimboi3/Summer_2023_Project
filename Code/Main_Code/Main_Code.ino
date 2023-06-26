@@ -24,105 +24,105 @@ void loop()
   int reading = analogRead(lightRead);
   Serial.println(reading);
 
-  if (reading < 5)
+  if (reading < 5) //display zero
   {
-  digitalWrite(center, LOW);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, HIGH);
+    digitalWrite(center, LOW);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 5 && reading < 10)
+  else if (reading >= 5 && reading < 10) //display one
   {
-  digitalWrite(center, LOW);
-  digitalWrite(leftUp, LOW);
-  digitalWrite(centerUp, LOW);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, LOW);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, LOW);
+    digitalWrite(leftUp, LOW);
+    digitalWrite(centerUp, LOW);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, LOW);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 10 && reading < 15)
+  else if (reading >= 10 && reading < 15) //display two
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, LOW);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, LOW);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, HIGH);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, LOW);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, LOW);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 15 && reading < 20)
+  else if (reading >= 15 && reading < 20) //display three
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, LOW);
-  digitalWrite(rightDown, LOW);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, HIGH);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, LOW);
+    digitalWrite(rightDown, LOW);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 20 && reading < 25)
+  else if (reading >= 20 && reading < 25) //display four
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, LOW);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, LOW);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, LOW);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, LOW);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 25 && reading < 30)
+  else if (reading >= 25 && reading < 30) //display five
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, LOW);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, LOW);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 30 && reading < 35)
+  else if (reading >= 30 && reading < 35) //display six
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, LOW);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, LOW);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 35 && reading < 40)
+  else if (reading >= 35 && reading < 40) //display seven
   {
-  digitalWrite(center, LOW);
-  digitalWrite(leftUp, LOW);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, LOW);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, LOW);
+    digitalWrite(leftUp, LOW);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, LOW);
+    digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 40 && reading < 45)
+  else if (reading >= 40 && reading < 45) //display eight
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, HIGH);
-  digitalWrite(leftDown, HIGH);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, HIGH);
+    digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 45)
+  else if (reading >= 45) //display nine
   {
-  digitalWrite(center, HIGH);
-  digitalWrite(leftUp, HIGH);
-  digitalWrite(centerUp, HIGH);
-  digitalWrite(rightUp, HIGH);
-  digitalWrite(rightDown, HIGH);
-  digitalWrite(centerDown, LOW);
-  digitalWrite(leftDown, LOW);
+    digitalWrite(center, HIGH);
+    digitalWrite(leftUp, HIGH);
+    digitalWrite(centerUp, HIGH);
+    digitalWrite(rightUp, HIGH);
+    digitalWrite(rightDown, HIGH);
+    digitalWrite(centerDown, LOW);
+    digitalWrite(leftDown, LOW);
   }
   delay(2000);
 }
