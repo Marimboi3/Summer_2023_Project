@@ -1,11 +1,11 @@
 const int lightRead = 0;
 const int center = 2;
-const int leftUp = 3;
-const int centerUp = 4;
-const int rightUp = 5;
-const int rightDown = 6;
-const int centerDown = 7;
-const int leftDown = 8;
+const int leftUp = 6;
+const int centerUp = 5;
+const int rightUp = 4;
+const int rightDown = 3;
+const int centerDown = 8;
+const int leftDown = 7;
 
 void setup() 
 {
@@ -24,7 +24,7 @@ void loop()
   int reading = analogRead(lightRead);
   Serial.println(reading);
 
-  if (reading < 72) //display zero
+  if (reading < 130) //display zero
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, HIGH);
@@ -34,7 +34,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 72 && reading < 144) //display one
+  else if (reading >= 130 && reading < 145) //display one
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, LOW);
@@ -44,7 +44,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 144 && reading < 217) //display two
+  else if (reading >= 145 && reading < 160) //display two
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, LOW);
@@ -54,7 +54,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 217 && reading < 289) //display three
+  else if (reading >= 160 && reading < 175) //display three
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, LOW);
@@ -64,7 +64,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 289 && reading < 361) //display four
+  else if (reading >= 175 && reading < 190) //display four
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -74,7 +74,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 361 && reading < 433) //display five
+  else if (reading >= 190 && reading < 205) //display five
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -84,7 +84,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 433 && reading < 506) //display six
+  else if (reading >= 205 && reading < 220) //display six
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -94,7 +94,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 506 && reading < 578) //display seven
+  else if (reading >= 220 && reading < 235) //display seven
   {
     digitalWrite(center, LOW);
     digitalWrite(leftUp, LOW);
@@ -104,7 +104,7 @@ void loop()
     digitalWrite(centerDown, LOW);
     digitalWrite(leftDown, LOW);
   }
-  else if (reading >= 578 && reading < 650) //display eight
+  else if (reading >= 235 && reading < 250) //display eight
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
@@ -114,7 +114,7 @@ void loop()
     digitalWrite(centerDown, HIGH);
     digitalWrite(leftDown, HIGH);
   }
-  else if (reading >= 650) //display nine
+  else if (reading >= 250) //display nine
   {
     digitalWrite(center, HIGH);
     digitalWrite(leftUp, HIGH);
